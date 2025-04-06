@@ -39,7 +39,7 @@ Feature: PetStore üzerindeki GET sorgusu ile yapılan Api Test'leri
 
   Scenario Outline: pet bölümünde GET sorgusu outline senaryo ile yapılan API testi
     Given url petBaseUrl
-    And path 'pet', read('classpath:data/examples.csv')
+    And path 'pet', <id>
     When method GET
     Then print response
     And status 404

@@ -39,7 +39,7 @@ Feature: PetStore üzerindeki POST sorgusu ile yapılan Api Test'leri
     Then request myRequestBody
     When method POST
     Then status 200
-    Then print response
+    * print response
     Then myRequestBody.id == response.id
     Then myRequestBody.petId == response.petId
     Then response.status == 'placed'
