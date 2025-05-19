@@ -26,34 +26,24 @@ This project is an API test automation suite built with [Karate Framework](https
 ## 📁 Project Structure
 
 ```
-├── .idea # IntelliJ project settings
-├── src
-│ ├── main
-│ │ ├── java # (empty or support classes if needed)
-│ │ ├── resources # application configs (if needed)
-│ ├── test
-│ │ ├── java
-│ │ │ ├── callers # Feature files triggering reusable tests
-│ │ │ │ ├── demo.feature
-│ │ │ ├── data # Test data files
-│ │ │ │ ├── createBooking.json
-│ │ │ │ ├── examples.csv
-│ │ │ │ ├── generate.js
-│ │ │ │ ├── postUser.json
-│ │ │ ├── feature # Main test features grouped by purpose
-│ │ │ │ ├── GET_goldCurrencyAndStockMarketAPI.feature
-│ │ │ │ ├── GET_onDutyPharmacyAPI.feature
-│ │ │ │ ├── GET_turkeyDieselPriceAPI.feature
-│ │ │ │ ├── PetStoreGET.feature
-│ │ │ │ ├── PetStorePOST.feature
-│ │ │ │ ├── POST_CreateBookingAPI.feature
-│ │ │ │ ├── POST_operationsAboutUserAPI.feature
-│ │ │ │ ├── practiseDay.feature
-│ │ │ │ ├── resffulgasd.feature
-│ │ │ ├── performanceRunners # For load/performance test runners
-│ │ │ ├── testRunner # Karate config files and test runners
-│ │ │ │ ├── karate-config.js
-│ │ │ │ ├── logback-test.xml
-├── target # Compiled test output and reports
-├── .gitignore
-├── pom.xml # Maven build file
+📁 KarateFramework  
+├── .idea  
+├── src  
+│   ├── main  
+│   │   ├── java  
+│   │   ├── resources  
+│   ├── test  
+│   │   ├── java  
+│   │   │   ├── callers  
+│   │   │   ├── data  
+│   │   │   ├── feature  
+│   │   │   ├── performanceRunners  
+│   │   │   ├── testRunner  
+│   │   │   ├── utilities  
+│   │   ├── karate-config.js  
+│   │   ├── logback-test.xml  
+├── target  
+├── .gitignore  
+├── pom.xml  
+├── External Libraries  
+├── Scratches and Consoles  
