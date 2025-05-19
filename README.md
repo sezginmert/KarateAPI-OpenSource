@@ -25,7 +25,7 @@ This project is an API test automation suite built with [Karate Framework](https
 
 ## 📁 Project Structure
 
-
+```
 ├── .idea # IntelliJ project settings
 ├── src
 │ ├── main
