@@ -20,7 +20,7 @@ Feature: Retrieve fuel prices from the Fuel API
     And params { city: 'izmir', district: 'seferihisar' }
     When method GET
     And print response
-    Then response.result[8].dizel == 47.3
+    Then match response.result[8].dizel == 47.3
     Then status 200
 
   Scenario: Diesel price is 46.94 TL for Petrol Ofisi in Cankaya, Ankara
@@ -31,5 +31,7 @@ Feature: Retrieve fuel prices from the Fuel API
     And  print response
     * def poDiesel = response.result.filter(x => x.marka == 'Petrol Ofisi')[0].dizel
     Then match poDiesel == 46.94
+
+
 
 

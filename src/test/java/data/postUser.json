@@ -1,8 +1,12 @@
-{
-  "id": 0,
-  "petId": 0,
-  "quantity": 0,
-  "shipDate": "2025-04-06T10:19:55.567Z",
-  "status": "placed",
-  "complete": true
-}
+[
+  {
+    "id": 0,
+    "username": "johndoe",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@gmail.com",
+    "password": "practice123",
+    "phone": "05055050505",
+    "userStatus": 1
+  }
+]

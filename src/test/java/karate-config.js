@@ -7,7 +7,10 @@ function fn() {
     var config = { // base config JSON
         petBaseUrl: 'https://petstore.swagger.io/v2/',
         anotherUrlBase: 'https://another-host.com/v1/',
-        restfulBaseUrl: 'https://restful-booker.herokuapp.com/'
+        restfulBaseUrl: 'https://restful-booker.herokuapp.com/',
+        fuelBaseUrl : 'https://api.collectapi.com/' ,
+        pharmacyBaseUrl : 'https://api.collectapi.com/',
+        goldStockMarketBaseUrl: 'https://api.collectapi.com/'
     };
     if (env == 'stage') {
         // over-ride only those that need to be

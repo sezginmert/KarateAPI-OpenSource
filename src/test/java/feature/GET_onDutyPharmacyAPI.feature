@@ -11,12 +11,12 @@ Feature: Retrieve on-duty pharmacies from the Pharmacy on Duty API
     And params { il: 'ankara', ilce: 'çankaya' }
     When method GET
     And print response
-    Then response.success == 'true'
+    Then match response.success == true
     Then status 200
 
   Scenario: Send GET request for Cankaya, Ankara and verify ERDIL ECZANESI is in the response
     And params { il: 'ankara', ilce: 'çankaya' }
     When method GET
     And print response
-    Then response.result[0].name == 'ERDIL ECZANESI'
+    Then match response.result[0].name == 'ERDIL ECZANESI'
     Then status 200

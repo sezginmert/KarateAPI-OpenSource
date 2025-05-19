@@ -96,5 +96,3 @@ Feature: Practise Day'de yapılacak Api Testleri
 
 
 
-
-
