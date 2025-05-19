@@ -17,7 +17,7 @@ This project is an API test automation suite built with [Karate Framework](https
 - Covers positive and negative test cases
 - Uses external data sources (JSON, CSV, JS)
 - Organized folder structure for maintainability
-- Easily extensible and CI/CD compatible
+
 
 ## ☕ Java Version
 
