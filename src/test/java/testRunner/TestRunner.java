@@ -6,25 +6,25 @@ public class TestRunner {
 
     // Sadece @smoke etiketi ile işaretlenmiş testleri çalıştırır
     @Karate.Test
-    Karate testSmoke() {
+    public Karate testSmoke() {
         return Karate.run("classpath:feature").tags("@smoke");
     }
 
     // Sadece @regression etiketi ile işaretlenmiş testleri çalıştırır
     @Karate.Test
-    Karate testRegression() {
+    public Karate testRegression() {
         return Karate.run("classpath:feature").tags("@regression");
     }
 
     // @smoke etiketi olmayan testleri çalıştırır
     @Karate.Test
-    Karate testWithoutSmoke() {
+    public Karate testWithoutSmoke() {
         return Karate.run("classpath:feature").tags("~@smoke");
     }
 
     // Tüm testleri çalıştırır
     @Karate.Test
-    Karate testAll() {
-        return Karate.run("classpath:feature");  // Burada tag kullanılmaz, tüm testler çalışır.
+    public Karate testAll() {
+        return Karate.run("classpath:feature");
     }
 }

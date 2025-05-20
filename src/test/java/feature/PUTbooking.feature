@@ -1,3 +1,4 @@
+@smoke
 Feature: Update an existing booking partially using PUT method
 
   Background:
