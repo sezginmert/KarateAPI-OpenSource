@@ -1,7 +1,7 @@
 Feature: Retrieve on-duty pharmacies from the Pharmacy on Duty API
 
   Background:
-    * def token = '18Pj6PvAsp6HajgcjsxVAa:3KHSpVlF1gvdPM0Ryz6v0o'
+    * def token = '23Pd8e4hQE0VQ5WOxUafC9:16WI1uZWrZV5Z3nOgkAbMg'
     Given url pharmacyBaseUrl
     And path 'health', 'dutyPharmacy'
     And header Authorization = 'apikey ' + token
@@ -14,9 +14,11 @@ Feature: Retrieve on-duty pharmacies from the Pharmacy on Duty API
     Then match response.success == true
     Then status 200
 
-  Scenario: Send GET request for Cankaya, Ankara and verify ERDIL ECZANESI is in the response
+  Scenario: Verify on-duty pharmacies in Cankaya, Ankara have valid structure
     And params { il: 'ankara', ilce: 'çankaya' }
     When method GET
     And print response
-    Then match response.result[0].name == 'ERDIL ECZANESI'
     Then status 200
+    And match response.success == true
+    And match response.result != []                      # Liste isnt empty check!
+    And match each response.result contains {name: '#string',address: '#string',dist: '#string',phone: '#string',loc: '#string'}
