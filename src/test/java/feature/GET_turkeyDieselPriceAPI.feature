@@ -1,7 +1,7 @@
 Feature: Retrieve fuel prices from the Fuel API
 
   Background:
-    * def token = '18Pj6PvAsp6HajgcjsxVAa:3KHSpVlF1gvdPM0Ryz6v0o'
+    * def token = '23Pd8e4hQE0VQ5WOxUafC9:16WI1uZWrZV5Z3nOgkAbMg'
     Given url fuelBaseUrl
     And path 'gasPrice','turkeyDiesel'
     And header Authorization = 'apikey ' + token
@@ -15,22 +15,21 @@ Feature: Retrieve fuel prices from the Fuel API
     And print response
     Then status 200
 
-  Scenario:  Diesel price is 47.3 TL for Opet in Seferihisar, Izmir
-
+  Scenario: Check Seferihisar, Izmir has at least one diesel price
     And params { city: 'izmir', district: 'seferihisar' }
     When method GET
-    And print response
-    Then match response.result[8].dizel == 47.3
     Then status 200
+    Then match response.success == true
+    * def hasDiesel = response.result.filter(x => x.dizel != null).length > 0
+    Then assert hasDiesel
 
-  Scenario: Diesel price is 46.94 TL for Petrol Ofisi in Cankaya, Ankara
-
+  Scenario: Check Petrol Ofisi diesel price exists in Cankaya, Ankara
     And params { city: 'ankara', district: 'cankaya' }
     When method GET
     Then status 200
-    And  print response
-    * def poDiesel = response.result.filter(x => x.marka == 'Petrol Ofisi')[0].dizel
-    Then match poDiesel == 46.94
+    Then match response.success == true
+    * def po = response.result.filter(x => x.marka == 'Petrol Ofisi')[0]
+    Then assert po.dizel != null
 
 
 

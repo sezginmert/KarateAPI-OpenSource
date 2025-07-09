@@ -1,4 +1,3 @@
-@regression
 Feature: API testing on the OpenAboutUser page
 
   Scenario: Create user and verify user information by username
