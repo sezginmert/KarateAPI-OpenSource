@@ -13,6 +13,7 @@ Feature: Retrieve on-duty pharmacies from the Pharmacy on Duty API
     And print response
     Then match response.success == true
     Then status 200
+    Then status 200
 
   Scenario: Verify on-duty pharmacies in Cankaya, Ankara have valid structure
     And params { il: 'ankara', ilce: 'çankaya' }

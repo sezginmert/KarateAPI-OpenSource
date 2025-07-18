@@ -9,3 +9,4 @@ Feature: Restfull API Create Token
     And method POST
     And print response
     Then status 200
+    Then status 200
